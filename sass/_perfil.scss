@@ -1,0 +1,45 @@
+@use 'variables';
+
+
+.perfil-profesional {
+    padding: 20px;
+    text-align: center;
+
+
+    h2 {
+        margin-bottom: 15px;
+        color: variables.$color-principal;
+    }
+
+    .perfil-contenido {
+        // Contenedor con fondo y borde
+        max-width: 600px; // Ancho máximo
+        margin: 0 auto; // Centrado horizontal
+        padding: 15px;
+        background-color: white;
+        border: 2px solid variables.$color-principal;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        p {
+            line-height: 1.6;
+            color: variables.$color-secundario;
+
+
+        }
+    }
+
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .perfil-profesional {
+        padding: 10px;
+
+        .perfil-contenido {
+            padding: 10px;
+            font-size: 0.95rem; // texto un poco más pequeño
+        }
+    }
+}

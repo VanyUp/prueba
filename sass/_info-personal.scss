@@ -1,0 +1,85 @@
+@use './variables';
+
+
+.info-personal {
+    display: flex; // Activa Flexbox
+    justify-content: center; // Separa izquierda y derecha
+    align-items: center; // Centra verticalmente
+    gap: 40px;
+
+    padding: 20px;
+
+    .izquierda {
+        text-align: center;
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin-top: 10px 0;
+
+        }
+
+        .tech-icons {
+            margin-top: 10px;
+
+            a {
+                color: variables.$color-secundario;
+                font-size: 24px;
+                margin: 0 10px;
+                text-decoration: none;
+                // &:hover = se aplica cuando el mouse pasa sobre el enlace
+                // "&" significa que toma el selector actual (a)
+
+                &:hover {
+                    //cambio a color principal al pasar el mouse
+                    color: variables.$color-principal;
+                }
+            }
+        }
+
+
+
+    }
+
+    .contacto {
+
+        h2 {
+            margin-bottom: 20px;
+            color: variables.$color-principal;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+
+
+            li {
+                margin: 8px 0;
+            }
+        }
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-personal {
+        padding: 10px;
+
+        .foto-perfil {
+            width: 120px;
+            height: 120px;
+        }
+
+        .tech-icons a {
+            font-size: 20px;
+            margin: 0 5px;
+        }
+    }
+}
