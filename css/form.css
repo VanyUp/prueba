@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.form-container {
+  max-width: 540px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #0077b5;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #0077b5;
+  margin-bottom: 18px;
+}
+
+.form-container form {
+  display: grid;
+  gap: 10px;
+}
+
+.form-container form label {
+  font-weight: 600;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+  /* espacio para el ojito */
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.toggle-pass:hover {
+  color: #0077b5;
+}
+
+.form-container form input[type=text],
+.form-container form input[type=email],
+.form-container form input[type=password],
+.form-container form input[type=date] {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.form-container form input[type=text]:focus,
+.form-container form input[type=email]:focus,
+.form-container form input[type=password]:focus,
+.form-container form input[type=date]:focus {
+  border-color: #0077b5;
+  box-shadow: 0 0 0 3px rgba(0, 119, 181, 0.15);
+}
+
+.form-container form input[type=text].is-invalid,
+.form-container form input[type=email].is-invalid,
+.form-container form input[type=password].is-invalid,
+.form-container form input[type=date].is-invalid {
+  border-color: #e53935;
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.12);
+}
+
+.form-container form input[type=text].is-valid,
+.form-container form input[type=email].is-valid,
+.form-container form input[type=password].is-valid,
+.form-container form input[type=date].is-valid {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+.form-container form .checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  user-select: none;
+}
+
+.form-container form .error {
+  color: #e53935;
+  font-size: 0.9rem;
+  min-height: 1.1em;
+}
+
+.form-container form .form-success {
+  color: #2e7d32;
+  text-align: center;
+  min-height: 1.1em;
+}
+
+.form-container form button[type=submit] {
+  margin-top: 6px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #0077b5;
+  color: #fff;
+  font-weight: 700;
+  transition: transform 0.05s ease, opacity 0.2s;
+}
+
+.form-container form button[type=submit]:active {
+  transform: translateY(1px);
+}
+
+.form-container form button[type=submit]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    margin: 20px 14px;
+    padding: 18px;
+  }
+}

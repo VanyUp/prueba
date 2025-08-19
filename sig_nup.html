@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <main class="form-container">
+        <h1>Registro de Usuario</h1>
+        <!-- novalidate (desactiva la validación automática del navegador para los campos del formulario) para manejar la validación nosotros con JS -->
+        <form id="signupForm" novalidate>
+            <!-- Nombre -->
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required placeholder="Ingresa tu primer nombre" required
+                minlength="4">
+            <span class="error-message" id="nameError"></span>
+
+            <!-- Apellido -->
+            <label for="surname">Apellido:</label>
+            <input type="text" id="surname" name="surname" required placeholder="Ingresa tu primer apellido" required
+                minlength="4">
+            <span class="error-message" id="surnameError"></span>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Ingresa tu correo electrónico" required>
+            <span class="error-message" id="emailError"></span>
+
+            <!-- Contraseña -->
+            <label for="password">Contraseña:</label>
+            <div class="password-wrapper">
+                <input type="password" id="password" name="password" required placeholder="Ingresa tu contraseña"
+                    required minlength="8" required>
+                <span class="toggle-pass" data-target="password">👁️</span>
+            </div>
+            <span class="error-message" id="passwordError"></span>
+
+            <!-- Confirmar Contraseña -->
+            <label for="confirmPassword">Confirmar Contraseña:</label>
+            <div class="password-wrapper">
+                <input type="password" id="confirmPassword" name="confirmPassword" required
+                    placeholder="Confirma tu contraseña" required minlength="8" required>
+                <span class="toggle-pass" data-target="confirmPassword">👁️</span>
+            </div>
+            <span class="error-message" id="confirmPasswordError"></span>
+
+            <!-- Fecha de nacimiento -->
+            <label for="birthdate">Fecha de Nacimiento:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <span class="error-message" id="birthdateError"></span>
+
+            <!-- Celular -->
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular" required placeholder="Ingresa tu número de celular" required
+                pattern="3[0-9]{9}">
+            <span class="error-message" id="phoneError"></span>
+
+            <!-- Tel -->
+            <label for="tel">Teléfono Fijo:</label>
+            <input type="text" id="tel" name="tel" placeholder="Ingresa tu número de teléfono fijo(opcional)"
+                pattern="[0-9]{7,}">
+            <span class="error-message" id="telError"></span>
+
+            <!-- Terminos-->
+            <label class="checkbox">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                Acepto los términos y condiciones
+            </label>
+
+            <span class="error-message" id="termsError"></span>
+
+            <!-- Botón de envío -->
+            <button type="submit" id="submitBtn">Registrarse</button>
+            <p class="form-success" id="form-success" aria-live="polite"></p>
+
+        </form>
+    </main>
+    <script src="js/form.js"></script>
+
+
+</body>
+
+</html>
