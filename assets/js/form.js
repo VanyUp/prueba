@@ -11,6 +11,11 @@ const errorSpanId = {
     terminos: 'termsError'
 };
 
+
+
+
+
+
 // ============ Utilidades de UI ============
 function setError(htmlId, msg) {
     const input = document.getElementById(htmlId);
